@@ -7,8 +7,9 @@ const GAME_HEIGHT = 600;
 let bx = 20;
 let by = 20;
 
+
 let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-let ball = new Ball(GAME_WIDTH, GAME_HEIGHT, paddle, detectCollission);
+let ball = new Ball(GAME_WIDTH, GAME_HEIGHT, paddle);
 
 
 let level1 = [
@@ -89,10 +90,10 @@ function keyupFunction(paddle, event){
     // alert(event.keyCode);//37</39>
     switch(event.keyCode){
     case 37:
-    if (paddle.speed <0)paddle.stop();
+    if (paddle.speed <0)paddle.stop();//если влево
     break;
     case 39:
-    if (paddle.speed >0)paddle.stop();
+    if (paddle.speed >0)paddle.stop();//если вправо
     break;
     }
 };
