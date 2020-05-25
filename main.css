@@ -1,0 +1,13 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+#mycanvas{
+    margin:0 auto;
+    background-color:lightgrey;
+    display:block;
+}
+#ball, #brick{
+    display:none;
+}
